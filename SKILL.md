@@ -75,6 +75,8 @@ The man in the reference image, wearing <帽子>, <外套逐项>, <裤子>, <鞋
 - 背景句固定句式：`The background references the reference video's background: ...`，冒号后按源片实景写一句
 - 段与段之间提示词**一字不改**、同一条
 
+**玩偶/微缩源片：自动等比缩放（2026-10-20 玩偶案实证，用户亲定为自动规则）**：源片主角是玩偶/手办/微缩模型（BJD 娃等）时，**自动**在提示词里把卡上人物写成与玩偶同尺寸的微缩真人，不许问、不等用户提醒。关键句式：`appears as a miniature 1/6-scale doll-sized figure, exactly the same size as the doll in the reference video, completely replacing the doll; there is no doll in the video`，并写明环境相对她是巨大的（`the hallway, doors and floor tiles are giant compared to her tiny doll-sized body`）。比例按源片玩偶判定（BJD 常见 1/6、1/4、1/3，看玩偶与门/家具的相对大小）。失败签名（v1 实证，任务 2112418528081698818）：按真人原尺寸写 → 模型把人当无头路人塞进开场宽镜、玩偶本人全程照旧演完；改 1/6 微缩一单即成（v2 任务 2112420584347623426）。注意：这类源片**不要写** `Full body in frame`（源片常推近到脸部特写，写了打架），只保留 `Head fully visible`。
+
 ### 第 5 步：逐段验看
 每段 SUCCESS 后下载 33 号 mp4，抽帧（首/中/尾）逐项查：
 - 脸＝卡本人、帽子在、着装与卡逐项一致
